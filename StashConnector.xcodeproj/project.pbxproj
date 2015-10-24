@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F011BDC16E1006F3D27 /* AppDelegate.swift */; };
+		26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F031BDC16E1006F3D27 /* Assets.xcassets */; };
+		26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F051BDC16E1006F3D27 /* MainMenu.xib */; };
+		26A51F121BDC16E1006F3D27 /* StashConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */; };
+		26A51F1D1BDC16E1006F3D27 /* StashConnectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26A51F0E1BDC16E1006F3D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26A51EF61BDC16E1006F3D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A51EFD1BDC16E1006F3D27;
+			remoteInfo = StashConnector;
+		};
+		26A51F191BDC16E1006F3D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26A51EF61BDC16E1006F3D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A51EFD1BDC16E1006F3D27;
+			remoteInfo = StashConnector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26A51EFE1BDC16E1006F3D27 /* StashConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A51F011BDC16E1006F3D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26A51F031BDC16E1006F3D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26A51F061BDC16E1006F3D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		26A51F081BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A51F0D1BDC16E1006F3D27 /* StashConnectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashConnectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashConnectorTests.swift; sourceTree = "<group>"; };
+		26A51F131BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A51F181BDC16E1006F3D27 /* StashConnectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashConnectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashConnectorUITests.swift; sourceTree = "<group>"; };
+		26A51F1E1BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26A51EFB1BDC16E1006F3D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F0A1BDC16E1006F3D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F151BDC16E1006F3D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26A51EF51BDC16E1006F3D27 = {
+			isa = PBXGroup;
+			children = (
+				26A51F001BDC16E1006F3D27 /* StashConnector */,
+				26A51F101BDC16E1006F3D27 /* StashConnectorTests */,
+				26A51F1B1BDC16E1006F3D27 /* StashConnectorUITests */,
+				26A51EFF1BDC16E1006F3D27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26A51EFF1BDC16E1006F3D27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26A51EFE1BDC16E1006F3D27 /* StashConnector.app */,
+				26A51F0D1BDC16E1006F3D27 /* StashConnectorTests.xctest */,
+				26A51F181BDC16E1006F3D27 /* StashConnectorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26A51F001BDC16E1006F3D27 /* StashConnector */ = {
+			isa = PBXGroup;
+			children = (
+				26A51F011BDC16E1006F3D27 /* AppDelegate.swift */,
+				26A51F031BDC16E1006F3D27 /* Assets.xcassets */,
+				26A51F051BDC16E1006F3D27 /* MainMenu.xib */,
+				26A51F081BDC16E1006F3D27 /* Info.plist */,
+			);
+			path = StashConnector;
+			sourceTree = "<group>";
+		};
+		26A51F101BDC16E1006F3D27 /* StashConnectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */,
+				26A51F131BDC16E1006F3D27 /* Info.plist */,
+			);
+			path = StashConnectorTests;
+			sourceTree = "<group>";
+		};
+		26A51F1B1BDC16E1006F3D27 /* StashConnectorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */,
+				26A51F1E1BDC16E1006F3D27 /* Info.plist */,
+			);
+			path = StashConnectorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26A51EFD1BDC16E1006F3D27 /* StashConnector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A51F211BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnector" */;
+			buildPhases = (
+				26A51EFA1BDC16E1006F3D27 /* Sources */,
+				26A51EFB1BDC16E1006F3D27 /* Frameworks */,
+				26A51EFC1BDC16E1006F3D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StashConnector;
+			productName = StashConnector;
+			productReference = 26A51EFE1BDC16E1006F3D27 /* StashConnector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26A51F0C1BDC16E1006F3D27 /* StashConnectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A51F241BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorTests" */;
+			buildPhases = (
+				26A51F091BDC16E1006F3D27 /* Sources */,
+				26A51F0A1BDC16E1006F3D27 /* Frameworks */,
+				26A51F0B1BDC16E1006F3D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26A51F0F1BDC16E1006F3D27 /* PBXTargetDependency */,
+			);
+			name = StashConnectorTests;
+			productName = StashConnectorTests;
+			productReference = 26A51F0D1BDC16E1006F3D27 /* StashConnectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26A51F171BDC16E1006F3D27 /* StashConnectorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A51F271BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorUITests" */;
+			buildPhases = (
+				26A51F141BDC16E1006F3D27 /* Sources */,
+				26A51F151BDC16E1006F3D27 /* Frameworks */,
+				26A51F161BDC16E1006F3D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26A51F1A1BDC16E1006F3D27 /* PBXTargetDependency */,
+			);
+			name = StashConnectorUITests;
+			productName = StashConnectorUITests;
+			productReference = 26A51F181BDC16E1006F3D27 /* StashConnectorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26A51EF61BDC16E1006F3D27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Ramy Kfoury";
+				TargetAttributes = {
+					26A51EFD1BDC16E1006F3D27 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					26A51F0C1BDC16E1006F3D27 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 26A51EFD1BDC16E1006F3D27;
+					};
+					26A51F171BDC16E1006F3D27 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 26A51EFD1BDC16E1006F3D27;
+					};
+				};
+			};
+			buildConfigurationList = 26A51EF91BDC16E1006F3D27 /* Build configuration list for PBXProject "StashConnector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26A51EF51BDC16E1006F3D27;
+			productRefGroup = 26A51EFF1BDC16E1006F3D27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26A51EFD1BDC16E1006F3D27 /* StashConnector */,
+				26A51F0C1BDC16E1006F3D27 /* StashConnectorTests */,
+				26A51F171BDC16E1006F3D27 /* StashConnectorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26A51EFC1BDC16E1006F3D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */,
+				26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F0B1BDC16E1006F3D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F161BDC16E1006F3D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26A51EFA1BDC16E1006F3D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F091BDC16E1006F3D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A51F121BDC16E1006F3D27 /* StashConnectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A51F141BDC16E1006F3D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A51F1D1BDC16E1006F3D27 /* StashConnectorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26A51F0F1BDC16E1006F3D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A51EFD1BDC16E1006F3D27 /* StashConnector */;
+			targetProxy = 26A51F0E1BDC16E1006F3D27 /* PBXContainerItemProxy */;
+		};
+		26A51F1A1BDC16E1006F3D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A51EFD1BDC16E1006F3D27 /* StashConnector */;
+			targetProxy = 26A51F191BDC16E1006F3D27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26A51F051BDC16E1006F3D27 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26A51F061BDC16E1006F3D27 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26A51F1F1BDC16E1006F3D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26A51F201BDC16E1006F3D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		26A51F221BDC16E1006F3D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26A51F231BDC16E1006F3D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26A51F251BDC16E1006F3D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnectorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashConnector.app/Contents/MacOS/StashConnector";
+			};
+			name = Debug;
+		};
+		26A51F261BDC16E1006F3D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnectorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashConnector.app/Contents/MacOS/StashConnector";
+			};
+			name = Release;
+		};
+		26A51F281BDC16E1006F3D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnectorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnectorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StashConnector;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		26A51F291BDC16E1006F3D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StashConnectorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnectorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StashConnector;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26A51EF91BDC16E1006F3D27 /* Build configuration list for PBXProject "StashConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A51F1F1BDC16E1006F3D27 /* Debug */,
+				26A51F201BDC16E1006F3D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26A51F211BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A51F221BDC16E1006F3D27 /* Debug */,
+				26A51F231BDC16E1006F3D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26A51F241BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A51F251BDC16E1006F3D27 /* Debug */,
+				26A51F261BDC16E1006F3D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26A51F271BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A51F281BDC16E1006F3D27 /* Debug */,
+				26A51F291BDC16E1006F3D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26A51EF61BDC16E1006F3D27 /* Project object */;
+}
