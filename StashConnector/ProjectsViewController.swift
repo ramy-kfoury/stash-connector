@@ -34,6 +34,7 @@ class DataProvider {
     }
     
     private func getProjects() {
+        dataStream.readLog()
         StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
             guard let json = json else { return }
             
@@ -112,19 +113,39 @@ private class DataIOStream {
     }
     
     func writeLog(projects: [StashProject]) {
-        let joined: String = projects.reduce("") { string, project in
-            return string + "\(project.toJSON())\n"
+        let writableProjects = projects.map { $0.toJSON() }
+        do {
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(writableProjects, options: NSJSONWritingOptions.PrettyPrinted)
+            do {
+                let projectsPath = logPath.URLByAppendingPathComponent("projects.log").absoluteString
+                if !NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
+                    NSFileManager.defaultManager().createFileAtPath(projectsPath, contents: nil, attributes: nil)
+                }
+                if let theJSONText = NSString(data: jsonData,
+                    encoding: NSASCIIStringEncoding) {
+                        try theJSONText.writeToFile(projectsPath, atomically: true, encoding: NSUTF8StringEncoding)
+                }
+            } catch {
+                // handle error
+            }
+        } catch let error as NSError {
+            print(error)
         }
         
+    }
+    
+    func readLog() -> [StashProject]? {
         do {
             let projectsPath = logPath.URLByAppendingPathComponent("projects.log").absoluteString
-            if !NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
-                NSFileManager.defaultManager().createFileAtPath(projectsPath, contents: nil, attributes: nil)
+            if NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
+                let contents = try String(contentsOfFile: projectsPath, encoding: NSUTF8StringEncoding)
+                let json = JSON(data: contents.dataUsingEncoding(NSUTF8StringEncoding)!)
+                print(json)
             }
-            try joined.writeToFile(projectsPath, atomically: true, encoding: NSUTF8StringEncoding)
         } catch {
             // handle error
         }
+        return nil
     }
 }
 
