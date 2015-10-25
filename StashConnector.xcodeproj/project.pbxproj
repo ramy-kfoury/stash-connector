@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26214FB91BDCC54800FA8558 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */; };
+		26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */; };
+		26823C521BDC2BD400114FAC /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C501BDC2BD400114FAC /* ProjectsViewController.swift */; };
+		26823C591BDC2DFF00114FAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C581BDC2DFF00114FAC /* Project.swift */; };
 		26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F011BDC16E1006F3D27 /* AppDelegate.swift */; };
 		26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F031BDC16E1006F3D27 /* Assets.xcassets */; };
 		26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F051BDC16E1006F3D27 /* MainMenu.xib */; };
 		26A51F121BDC16E1006F3D27 /* StashConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */; };
 		26A51F1D1BDC16E1006F3D27 /* StashConnectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */; };
+		26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
+		26823C501BDC2BD400114FAC /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		26823C581BDC2DFF00114FAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		26A51EFE1BDC16E1006F3D27 /* StashConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A51F011BDC16E1006F3D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26A51F031BDC16E1006F3D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +52,7 @@
 		26A51F181BDC16E1006F3D27 /* StashConnectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashConnectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashConnectorUITests.swift; sourceTree = "<group>"; };
 		26A51F1E1BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StashNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26823C541BDC2DC200114FAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26823C501BDC2BD400114FAC /* ProjectsViewController.swift */,
+				26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		26823C551BDC2DD400114FAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				26A51F031BDC16E1006F3D27 /* Assets.xcassets */,
+				26A51F051BDC16E1006F3D27 /* MainMenu.xib */,
+				26A51F081BDC16E1006F3D27 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		26823C561BDC2DDE00114FAC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				26823C571BDC2DE700114FAC /* Models */,
+				26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		26823C571BDC2DE700114FAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */,
+				26823C581BDC2DFF00114FAC /* Project.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		26A51EF51BDC16E1006F3D27 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				26A51F011BDC16E1006F3D27 /* AppDelegate.swift */,
-				26A51F031BDC16E1006F3D27 /* Assets.xcassets */,
-				26A51F051BDC16E1006F3D27 /* MainMenu.xib */,
-				26A51F081BDC16E1006F3D27 /* Info.plist */,
+				26823C541BDC2DC200114FAC /* Controllers */,
+				26823C561BDC2DDE00114FAC /* Networking */,
+				26823C551BDC2DD400114FAC /* Resources */,
 			);
 			path = StashConnector;
 			sourceTree = "<group>";
@@ -224,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */,
+				26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */,
 				26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26823C521BDC2BD400114FAC /* ProjectsViewController.swift in Sources */,
 				26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */,
+				26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */,
+				26214FB91BDCC54800FA8558 /* SwiftyJSON.swift in Sources */,
+				26823C591BDC2DFF00114FAC /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +523,7 @@
 				26A51F231BDC16E1006F3D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26A51F241BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +532,7 @@
 				26A51F261BDC16E1006F3D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26A51F271BDC16E1006F3D27 /* Build configuration list for PBXNativeTarget "StashConnectorUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +541,7 @@
 				26A51F291BDC16E1006F3D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
