@@ -31,7 +31,7 @@ private class StashRequestBuilder {
     
     struct Constants {
         private static let username = "ramy_kfoury"
-        private static let password = "ramy10+08_89"
+        private static let password = "password"
     }
     
     static func build(url: NSURL) -> NSURLRequest? {

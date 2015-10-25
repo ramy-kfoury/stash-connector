@@ -19,10 +19,10 @@ class XcodeServerManager {
     
     func connectToServer(completion: () -> Void) {
         do {
-            let config = try XcodeServerConfig(host: "https://ramyserver.local", user: "rkfoury", password: "RamyRoxy123")
+            let config = try XcodeServerConfig(host: "https://myserver.local", user: "admin", password: "admin")
             self.server = XcodeServerFactory.server(config)
             
-            self.server.getUserCanCreateBots({ (canCreateBots, error) -> () in
+            self.server.getUserCanCreateBots({ canCreateBots, error in
                 if error != nil {
                     print(error!.localizedDescription)
                     return
@@ -75,14 +75,7 @@ class XcodeServerManager {
     private func deleteBot(forBranch branch: String) {
         if let bot = self.findBot(forBranch: branch) {
             print("found bot \(bot)")
-            self.server.getUserCanCreateBots({ (canCreateBots, error) -> () in
-                if error != nil {
-                    print(error!.localizedDescription)
-                    return
-                }
-                
-                print("user can create bots")
-            })
+            
             self.server.deleteBot(bot.id, revision: bot.rev, completion: { success, error in
                 if error != nil {
                     print(error!.localizedDescription)
