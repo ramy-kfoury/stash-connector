@@ -88,7 +88,8 @@ class DataProvider {
                             if let savedRepository = savedProject.repositories.filter({ $0.slug == repository.slug }).first {
                                 let savedBranches = Set(savedRepository.branches.map({ $0.id }))
                                 let newBranches = fetchedBranches.subtract(savedBranches)
-                                print("newBranches: \(newBranches)")
+                                let deletedBranches = savedBranches.subtract(fetchedBranches)
+                                XcodeServerManager(newBranches: newBranches, deletedBranches: deletedBranches).updateBots()
                             }
                         }
                     }

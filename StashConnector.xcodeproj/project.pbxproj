@@ -17,6 +17,7 @@
 		26A51F121BDC16E1006F3D27 /* StashConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */; };
 		26A51F1D1BDC16E1006F3D27 /* StashConnectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */; };
 		26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */; };
+		26F2B6031BDD0D3F001E43DD /* XcodeServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashConnectorUITests.swift; sourceTree = "<group>"; };
 		26A51F1E1BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StashNetworking.swift; sourceTree = "<group>"; };
+		26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				26823C501BDC2BD400114FAC /* ProjectsViewController.swift */,
 				26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */,
+				26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F2B6031BDD0D3F001E43DD /* XcodeServerManager.swift in Sources */,
 				26823C521BDC2BD400114FAC /* ProjectsViewController.swift in Sources */,
 				26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */,
 				26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */,
