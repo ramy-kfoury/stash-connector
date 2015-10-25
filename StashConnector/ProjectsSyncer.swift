@@ -10,14 +10,17 @@ import Foundation
 
 class DataProvider {
     
+    private var serverManager = XcodeServerManager()
     private var savedToDiskProjects = [StashProject]()
     private var projects = [StashProject]()
     private var dataStream = DataIOStream()
     
     func run() {
-        XcodeServerManager().connectToServer()
-//        savedToDiskProjects.appendContentsOf(dataStream.readLog())
-//        getProjects()
+        self.serverManager.connectToServer { [unowned self] in
+            self.serverManager.getBots()
+        }
+        savedToDiskProjects.appendContentsOf(dataStream.readLog())
+        getProjects()
     }
     
     private func getProjects() {
@@ -74,7 +77,7 @@ class DataProvider {
                                 let savedBranches = Set(savedRepository.branches.map({ $0.id }))
                                 let newBranches = fetchedBranches.subtract(savedBranches)
                                 let deletedBranches = savedBranches.subtract(fetchedBranches)
-                                XcodeServerManager(newBranches: newBranches, deletedBranches: deletedBranches).updateBots()
+                                self.serverManager.set(newBranches, deletedBranches: deletedBranches)
                             }
                         }
                     }
