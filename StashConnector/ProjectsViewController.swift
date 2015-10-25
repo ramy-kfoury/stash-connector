@@ -10,19 +10,30 @@ import Cocoa
 
 class ProjectsViewController: NSViewController {
     
-    private var projects = [StashProject]()
-    private var repositories = [StashRepository]()
-    
     static func instance() -> ProjectsViewController {
         return ProjectsViewController(nibName: "ProjectsViewController", bundle: nil)!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "getProjects", userInfo: nil, repeats: true).fire()
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "getData", userInfo: nil, repeats: true).fire()
     }
     
-    func getProjects() {
+    func getData() {
+        DataProvider().run()
+    }
+}
+
+class DataProvider {
+    
+    private var projects = [StashProject]()
+    private var repositories = [StashRepository]()
+    
+    func run() {
+        getProjects()
+    }
+    
+    private func getProjects() {
         StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
             guard let json = json else {
                 print(error)
@@ -65,7 +76,7 @@ class ProjectsViewController: NSViewController {
             projectRepos.forEach{ repository in
                 StashNetworking.request(withEndpoint: Endpoint.Branches(projectKey: project.key, repositorySlug: repository.slug)) { json, error in
                     guard let json = json else { return }
-
+                    
                     if let values = json["values"].array {
                         let branches = values.map { value in
                             StashBranch(withJSON: value)
@@ -78,5 +89,5 @@ class ProjectsViewController: NSViewController {
             }
         }
     }
-    
+
 }
