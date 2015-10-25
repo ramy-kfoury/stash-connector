@@ -15,8 +15,9 @@ class DataProvider {
     private var dataStream = DataIOStream()
     
     func run() {
-        savedToDiskProjects.appendContentsOf(dataStream.readLog())
-        getProjects()
+        XcodeServerManager().connectToServer()
+//        savedToDiskProjects.appendContentsOf(dataStream.readLog())
+//        getProjects()
     }
     
     private func getProjects() {

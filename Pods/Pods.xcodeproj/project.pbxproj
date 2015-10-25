@@ -1,0 +1,861 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A2C753BF44F4CD304F6F1F1DD75E62 /* XcodeServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800532516E6AC37B17572D1B1B8F786 /* XcodeServerConfig.swift */; };
+		056E6CA25F653F609292F6E3F0EE2069 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D95A5AA1F3E4C7EE53A38D9796B1AC /* Errors.swift */; };
+		07724519D1731D2F123A8D5B9530A4E8 /* XcodeServer+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD1F708368E2000DE09605A98B9429 /* XcodeServer+Platform.swift */; };
+		081361064C9E6E4D73F6E43683CCD17B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD11BDCE3EBDE75B0B22A1048FB19CA /* Server.swift */; };
+		088718BB2EB68236AEF1CE604E894FC5 /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F203F0C8BD6828B3E19B1E12009E77 /* XcodeServer+SCM.swift */; };
+		08BF7C579C89AD3AA804B0EA7742C220 /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96AD7F1A3CC2E6C5A331F51A978CBD0 /* XcodeServer+Bot.swift */; };
+		1C4E465ED282C2410F651A31F4140809 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CE45FCF25396179F763FA9E71ACF71 /* Contributor.swift */; };
+		1EBDC0085F3A5A287F9A77FACB579C6D /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC40B613216FF4AC058DC8F812874B /* EmailConfiguration.swift */; };
+		1EC86D4F092424A93DF768B1A4CCB201 /* IntegrationCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EBEC28D5A060BC60E862CF1801590D /* IntegrationCommits.swift */; };
+		20F53C33B887C4716C661015EAC6C633 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F084883DD475EBA1E3F9910CD4A02E29 /* TimeUtils.swift */; };
+		2735CD6428F2EE0D20D4CA77465B5AF4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B28569596A9F9CDD2DA9408639CF33 /* Device.swift */; };
+		277879481C6E286314C0895907675D5B /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE14593F8FAB69723AF499BF6F3BB09 /* LiveUpdateMessage.swift */; };
+		2894AD2D549816D2CF8A66769118BF79 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB51D9B48BA76EA2B9971891601C1C /* Logging.swift */; };
+		29987C2C59F8070AE737FA8660BB8832 /* XcodeServer+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2D3DD0EE8E3C78C2FE390FB27A33A /* XcodeServer+Device.swift */; };
+		341188E99B09A30FDA775EDFD5335825 /* XcodeServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A380003D3FF57ADAE8166873FFDA06A /* XcodeServerConstants.swift */; };
+		35FFC3BD4556456CC93CBAFF573CCA35 /* BuildaUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F798432BF88F9C906E3842FCA87CCF /* BuildaUtils.framework */; };
+		36B01D94FE6EE72B509BEC535451303C /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7109A56E3875DA937B217B93B272332 /* XcodeServer+Auth.swift */; };
+		3B994611608639D048DFE4AA7F0BAD6F /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABB7E0A32D15F6B7F4CEC0B2A52ADA6 /* XcodeServer+Repository.swift */; };
+		467D34A1718C1ED5F354330A664ACFFC /* CIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D047E836A2F09B03E0AA23DC24A12B2 /* CIServer.swift */; };
+		47BC46C7D281A4A167D67CBCE5F3A64C /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57963984592C29F715FAF9D3013BF581 /* Trigger.swift */; };
+		499D976AC01D59ABC70D6D3F784CEBF2 /* XcodeServer+Miscs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9ED766615830C5D6831F474E919022 /* XcodeServer+Miscs.swift */; };
+		4E74570828E113250CE546CF31CBCDC8 /* BuildaUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F0C9B05BCFE3DEA71484096FE4609 /* BuildaUtils-dummy.m */; };
+		51E0DE101787FBC31EE927A51F59994A /* SocketIOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11E279E239F15F0B81ACFAEF0A7D6D3 /* SocketIOHelper.swift */; };
+		5539D6C3A20580496ED68078402CEB7E /* BotConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7F36A2E82BE792AA6A6581FADA3BBE /* BotConfiguration.swift */; };
+		5D6B9F98EEA67D8020BED5B9EBF42776 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA5E778269E340646CA418DAD3EA93 /* JSON.swift */; };
+		633B98CEC44B39272B6F3E54ACA96F05 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E74EB4AD067E8618B89D49F5D626C46 /* Ref.swift */; };
+		6919870CC722D14AEA2A459257796C45 /* SourceControlBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B0E61986F4F09CB69703427E85B84 /* SourceControlBlueprint.swift */; };
+		6AB98426837808BF47B3955EFA81D2A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04D181FD5129D0FACC107D6F3D481A /* Cocoa.framework */; };
+		6AE58B15D0BDF7EDD7234853EE0660BE /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F8051CE852511862F4D8B0D9079DE /* Commit.swift */; };
+		76E2CEB33FDDB725E83B7EF6BF7D0AD3 /* XcodeServerSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A14B1508D9BDA1F58A5056335BC49B59 /* XcodeServerSDK-dummy.m */; };
+		7C07438DF474F9A6422C59DD15F6F210 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8962B2554C1AC2234158DF42438A9 /* Availability.swift */; };
+		7D777019F8367454A91CC5DB596000C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04D181FD5129D0FACC107D6F3D481A /* Cocoa.framework */; };
+		879A2993967C7E98E35878D8157EB9A2 /* XcodeServer+LiveUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7044FB8E55712FA158D6A2EA4348A76 /* XcodeServer+LiveUpdates.swift */; };
+		8A31DCEC0A56BFA4445DD3444C7D2970 /* Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE706CC17CE2A704F4D8B1FAA4ADA2 /* Integration.swift */; };
+		9F19570EFB8BC3DBAC6A2108362B3687 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1ABC223270E9D6D618192B8D4C749 /* Extensions.swift */; };
+		A33EAA9F017E8F51CCF47DC72BC45380 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466FE919182815EE4F99FDD751C6FA3 /* Script.swift */; };
+		AB136B2695D4CEDFA37ECD487B6956AC /* BuildaUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0578F275FA6461263E467C8FD6351A /* BuildaUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4CD86C0A64FCECD8C064D3ED5C2BDE8 /* XcodeServerSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F908B50E5CCC58127221E7A1ED34BE38 /* XcodeServerSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B605C27B46203FC8F190DFFA25E37473 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306B620EF2EE3DE5DD5F917598E99C7 /* ContainerExtensions.swift */; };
+		BD17C3ABD2F2713296FCBA81F93D3B47 /* XcodeServerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E4AB880D7D0B8956854168F4AB732 /* XcodeServerEntity.swift */; };
+		BE3BCF920BB48EF427DE424A0C22BDCD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073383C9EC8B8731292CD6F088455CFB /* File.swift */; };
+		BFF6A078ADFC8296513FABEDDA3DF6D9 /* HTTPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2080003D6B02A58912012830EEFCC /* HTTPUtils.swift */; };
+		C083F1B4193576EC1EDF6441E9610D57 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12691A791137AA4FBA21DD8B6C456F12 /* DeviceSpecification.swift */; };
+		CB84DEC4CAF7A70093A41357147BC014 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846D107A5AF95E5F5501155C6852E1A /* BotSchedule.swift */; };
+		CF15B7FC340C832208CE5995CFA4035A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED02273B15B5CBC20A00091A56B50EA /* Repository.swift */; };
+		D1EE469BCA2433ECE00AF493846CA978 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A2763CD5487E708ADC800F13EC6591 /* XcodeServer+Integration.swift */; };
+		D37917513B7ED7E8FFC674273BE3C7A2 /* IntegrationIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68B76CE682020D3361D0C7FDD7CA8F /* IntegrationIssue.swift */; };
+		D697A7DDBE75C68C2A1EB6C4D343FAFA /* IntegrationIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94F82FC87730D61042B343266DFA6C /* IntegrationIssues.swift */; };
+		DB32338881FBB11201C35D0437D8E897 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A5B492F6E3B659CDA1B41218FC5D6 /* Bot.swift */; };
+		DF81354AC3F6576D9E40236179888E8A /* XcodeServerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA510A5DACEB39AE719D2A17E54F5B7 /* XcodeServerFactory.swift */; };
+		E85CC34E68B3F14253B455E4500D07B2 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318CF5A37EFD900C65ECCA814380160C /* TriggerConditions.swift */; };
+		E92BA4DE4B2D6825A7BBB80475FA7599 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CA3A48CCD66B69846FC97CF3ED61D /* TestHierarchy.swift */; };
+		ECC9EC88D6168CD939E635D27FF456EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04D181FD5129D0FACC107D6F3D481A /* Cocoa.framework */; };
+		F048F72BFC56D9CB19D893B0175935F3 /* XcodeServerEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DCD20EE04D5B4E2816758533BCF0D /* XcodeServerEndpoints.swift */; };
+		F45395CC154133935B62FF29941BA0A8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		F6136C4AF436C3DC73F47D617D4A00E0 /* XcodeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7520B1821A470CDA3C12AD6D84E22 /* XcodeServer.swift */; };
+		FC33779DC95CA5EC3D5D4D61E19879EB /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AFB0591D840FDEE056018F9590BD9DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A6B86921EFE530108D4E62627218CD;
+			remoteInfo = BuildaUtils;
+		};
+		8C02FA5B8A8066829C9887DD18EAF305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A6B86921EFE530108D4E62627218CD;
+			remoteInfo = BuildaUtils;
+		};
+		D3B3C7BD8A06E1CD886A2CAA06BD06E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9548A9EE9926C91F2109392C3606D47;
+			remoteInfo = XcodeServerSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0306B620EF2EE3DE5DD5F917598E99C7 /* ContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerExtensions.swift; path = BuildaUtils/ContainerExtensions.swift; sourceTree = "<group>"; };
+		036A5B492F6E3B659CDA1B41218FC5D6 /* Bot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bot.swift; path = "XcodeServerSDK/Server Entities/Bot.swift"; sourceTree = "<group>"; };
+		073383C9EC8B8731292CD6F088455CFB /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = "XcodeServerSDK/Server Entities/File.swift"; sourceTree = "<group>"; };
+		0D9CA3A48CCD66B69846FC97CF3ED61D /* TestHierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestHierarchy.swift; path = "XcodeServerSDK/Server Entities/TestHierarchy.swift"; sourceTree = "<group>"; };
+		11F203F0C8BD6828B3E19B1E12009E77 /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+SCM.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+SCM.swift"; sourceTree = "<group>"; };
+		12691A791137AA4FBA21DD8B6C456F12 /* DeviceSpecification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceSpecification.swift; path = "XcodeServerSDK/Server Entities/DeviceSpecification.swift"; sourceTree = "<group>"; };
+		1466FE919182815EE4F99FDD751C6FA3 /* Script.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Script.swift; path = BuildaUtils/Script.swift; sourceTree = "<group>"; };
+		1ABB7E0A32D15F6B7F4CEC0B2A52ADA6 /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Repository.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Repository.swift"; sourceTree = "<group>"; };
+		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		2E5B0E61986F4F09CB69703427E85B84 /* SourceControlBlueprint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceControlBlueprint.swift; path = "XcodeServerSDK/Server Entities/SourceControlBlueprint.swift"; sourceTree = "<group>"; };
+		318CF5A37EFD900C65ECCA814380160C /* TriggerConditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TriggerConditions.swift; path = "XcodeServerSDK/Server Entities/TriggerConditions.swift"; sourceTree = "<group>"; };
+		36CE45FCF25396179F763FA9E71ACF71 /* Contributor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contributor.swift; path = "XcodeServerSDK/Server Entities/Contributor.swift"; sourceTree = "<group>"; };
+		393E4AB880D7D0B8956854168F4AB732 /* XcodeServerEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServerEntity.swift; path = XcodeServerSDK/XcodeServerEntity.swift; sourceTree = "<group>"; };
+		3AFDE66F587391D1EB1EFEB649F0A2B5 /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4021EBC8C3D2FAC2CE74556966BBDC74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42CB51D9B48BA76EA2B9971891601C1C /* Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = BuildaUtils/Logging.swift; sourceTree = "<group>"; };
+		42EBEC28D5A060BC60E862CF1801590D /* IntegrationCommits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegrationCommits.swift; path = "XcodeServerSDK/Server Entities/IntegrationCommits.swift"; sourceTree = "<group>"; };
+		4A380003D3FF57ADAE8166873FFDA06A /* XcodeServerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServerConstants.swift; path = "XcodeServerSDK/Server Helpers/XcodeServerConstants.swift"; sourceTree = "<group>"; };
+		4BE2080003D6B02A58912012830EEFCC /* HTTPUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPUtils.swift; path = BuildaUtils/HTTPUtils.swift; sourceTree = "<group>"; };
+		4D047E836A2F09B03E0AA23DC24A12B2 /* CIServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIServer.swift; path = "XcodeServerSDK/Server Helpers/CIServer.swift"; sourceTree = "<group>"; };
+		4DE8962B2554C1AC2234158DF42438A9 /* Availability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Availability.swift; path = BuildaUtils/Availability.swift; sourceTree = "<group>"; };
+		4E74EB4AD067E8618B89D49F5D626C46 /* Ref.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ref.swift; path = BuildaUtils/Ref.swift; sourceTree = "<group>"; };
+		57963984592C29F715FAF9D3013BF581 /* Trigger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trigger.swift; path = "XcodeServerSDK/Server Entities/Trigger.swift"; sourceTree = "<group>"; };
+		62525D6EC3CAB306A4548B4A3447B289 /* XcodeServerSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XcodeServerSDK-prefix.pch"; sourceTree = "<group>"; };
+		62B28569596A9F9CDD2DA9408639CF33 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = "XcodeServerSDK/Server Entities/Device.swift"; sourceTree = "<group>"; };
+		77C7520B1821A470CDA3C12AD6D84E22 /* XcodeServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServer.swift; path = XcodeServerSDK/XcodeServer.swift; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7ACA5E778269E340646CA418DAD3EA93 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = BuildaUtils/JSON.swift; sourceTree = "<group>"; };
+		7AE14593F8FAB69723AF499BF6F3BB09 /* LiveUpdateMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LiveUpdateMessage.swift; path = "XcodeServerSDK/Server Entities/LiveUpdateMessage.swift"; sourceTree = "<group>"; };
+		7D68B76CE682020D3361D0C7FDD7CA8F /* IntegrationIssue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegrationIssue.swift; path = "XcodeServerSDK/Server Entities/IntegrationIssue.swift"; sourceTree = "<group>"; };
+		7E064C700909767B6C962C3653FAB04F /* BuildaUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BuildaUtils.modulemap; sourceTree = "<group>"; };
+		7E95BD9B397F85422FBFB2EABC1E8044 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		8A9F0C9B05BCFE3DEA71484096FE4609 /* BuildaUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BuildaUtils-dummy.m"; sourceTree = "<group>"; };
+		8B9ED766615830C5D6831F474E919022 /* XcodeServer+Miscs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Miscs.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Miscs.swift"; sourceTree = "<group>"; };
+		8ED02273B15B5CBC20A00091A56B50EA /* Repository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = "XcodeServerSDK/Server Entities/Repository.swift"; sourceTree = "<group>"; };
+		95F798432BF88F9C906E3842FCA87CCF /* BuildaUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BuildaUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		9846D107A5AF95E5F5501155C6852E1A /* BotSchedule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BotSchedule.swift; path = "XcodeServerSDK/Server Entities/BotSchedule.swift"; sourceTree = "<group>"; };
+		A0DD1F708368E2000DE09605A98B9429 /* XcodeServer+Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Platform.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Platform.swift"; sourceTree = "<group>"; };
+		A14B1508D9BDA1F58A5056335BC49B59 /* XcodeServerSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XcodeServerSDK-dummy.m"; sourceTree = "<group>"; };
+		A7109A56E3875DA937B217B93B272332 /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Auth.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Auth.swift"; sourceTree = "<group>"; };
+		A8A2763CD5487E708ADC800F13EC6591 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Integration.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Integration.swift"; sourceTree = "<group>"; };
+		ACA510A5DACEB39AE719D2A17E54F5B7 /* XcodeServerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServerFactory.swift; path = XcodeServerSDK/XcodeServerFactory.swift; sourceTree = "<group>"; };
+		B4D95A5AA1F3E4C7EE53A38D9796B1AC /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = BuildaUtils/Errors.swift; sourceTree = "<group>"; };
+		B76F8051CE852511862F4D8B0D9079DE /* Commit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Commit.swift; path = "XcodeServerSDK/Server Entities/Commit.swift"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C06ADA15FA95176F3A0EA24CAC833448 /* BuildaUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuildaUtils.xcconfig; sourceTree = "<group>"; };
+		C3AC40B613216FF4AC058DC8F812874B /* EmailConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmailConfiguration.swift; path = "XcodeServerSDK/Server Entities/EmailConfiguration.swift"; sourceTree = "<group>"; };
+		C457D547F72E438771E03159E82DE9BA /* XcodeServerSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XcodeServerSDK.modulemap; sourceTree = "<group>"; };
+		C789411490B4F836E13A19794B88C3FE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C800532516E6AC37B17572D1B1B8F786 /* XcodeServerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServerConfig.swift; path = XcodeServerSDK/XcodeServerConfig.swift; sourceTree = "<group>"; };
+		CA94F82FC87730D61042B343266DFA6C /* IntegrationIssues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegrationIssues.swift; path = "XcodeServerSDK/Server Entities/IntegrationIssues.swift"; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CDB1ABC223270E9D6D618192B8D4C749 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = BuildaUtils/Extensions.swift; sourceTree = "<group>"; };
+		CE04D181FD5129D0FACC107D6F3D481A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		CF7F36A2E82BE792AA6A6581FADA3BBE /* BotConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BotConfiguration.swift; path = "XcodeServerSDK/Server Entities/BotConfiguration.swift"; sourceTree = "<group>"; };
+		CFD11BDCE3EBDE75B0B22A1048FB19CA /* Server.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Server.swift; path = BuildaUtils/Server.swift; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D4FE706CC17CE2A704F4D8B1FAA4ADA2 /* Integration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Integration.swift; path = "XcodeServerSDK/Server Entities/Integration.swift"; sourceTree = "<group>"; };
+		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DD4DCD20EE04D5B4E2816758533BCF0D /* XcodeServerEndpoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XcodeServerEndpoints.swift; path = XcodeServerSDK/XcodeServerEndpoints.swift; sourceTree = "<group>"; };
+		DFB7698D28B3D3D03BA7459E398CB0FD /* BuildaUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BuildaUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11E279E239F15F0B81ACFAEF0A7D6D3 /* SocketIOHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOHelper.swift; path = "XcodeServerSDK/Server Helpers/SocketIOHelper.swift"; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7A172AA750AB402B4711B32C14652A /* XcodeServerSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XcodeServerSDK.xcconfig; sourceTree = "<group>"; };
+		F084883DD475EBA1E3F9910CD4A02E29 /* TimeUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeUtils.swift; path = BuildaUtils/TimeUtils.swift; sourceTree = "<group>"; };
+		F27D065BF1FA9F1FEED546E45595D3DC /* BuildaUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuildaUtils-prefix.pch"; sourceTree = "<group>"; };
+		F6F2D3DD0EE8E3C78C2FE390FB27A33A /* XcodeServer+Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Device.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Device.swift"; sourceTree = "<group>"; };
+		F7044FB8E55712FA158D6A2EA4348A76 /* XcodeServer+LiveUpdates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+LiveUpdates.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+LiveUpdates.swift"; sourceTree = "<group>"; };
+		F908B50E5CCC58127221E7A1ED34BE38 /* XcodeServerSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XcodeServerSDK-umbrella.h"; sourceTree = "<group>"; };
+		F96AD7F1A3CC2E6C5A331F51A978CBD0 /* XcodeServer+Bot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XcodeServer+Bot.swift"; path = "XcodeServerSDK/API Routes/XcodeServer+Bot.swift"; sourceTree = "<group>"; };
+		FF0578F275FA6461263E467C8FD6351A /* BuildaUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuildaUtils-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05F05197B7BE39E9A4F2D77266027AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D777019F8367454A91CC5DB596000C9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D5876AD2BC58C299C523E9602C2D358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35FFC3BD4556456CC93CBAFF573CCA35 /* BuildaUtils.framework in Frameworks */,
+				ECC9EC88D6168CD939E635D27FF456EB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4511C0AD5CAE534E5561E1A12AAFFF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB98426837808BF47B3955EFA81D2A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AC4442877CE1D8F038D5E3041316C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95F798432BF88F9C906E3842FCA87CCF /* BuildaUtils.framework */,
+				BA1A711B18B285B24589153D5F8AA8E5 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D8AAEB4415722A8A49F6B5533AF4AAB /* XcodeServerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				036A5B492F6E3B659CDA1B41218FC5D6 /* Bot.swift */,
+				CF7F36A2E82BE792AA6A6581FADA3BBE /* BotConfiguration.swift */,
+				9846D107A5AF95E5F5501155C6852E1A /* BotSchedule.swift */,
+				4D047E836A2F09B03E0AA23DC24A12B2 /* CIServer.swift */,
+				B76F8051CE852511862F4D8B0D9079DE /* Commit.swift */,
+				36CE45FCF25396179F763FA9E71ACF71 /* Contributor.swift */,
+				62B28569596A9F9CDD2DA9408639CF33 /* Device.swift */,
+				12691A791137AA4FBA21DD8B6C456F12 /* DeviceSpecification.swift */,
+				C3AC40B613216FF4AC058DC8F812874B /* EmailConfiguration.swift */,
+				073383C9EC8B8731292CD6F088455CFB /* File.swift */,
+				D4FE706CC17CE2A704F4D8B1FAA4ADA2 /* Integration.swift */,
+				42EBEC28D5A060BC60E862CF1801590D /* IntegrationCommits.swift */,
+				7D68B76CE682020D3361D0C7FDD7CA8F /* IntegrationIssue.swift */,
+				CA94F82FC87730D61042B343266DFA6C /* IntegrationIssues.swift */,
+				7AE14593F8FAB69723AF499BF6F3BB09 /* LiveUpdateMessage.swift */,
+				8ED02273B15B5CBC20A00091A56B50EA /* Repository.swift */,
+				E11E279E239F15F0B81ACFAEF0A7D6D3 /* SocketIOHelper.swift */,
+				2E5B0E61986F4F09CB69703427E85B84 /* SourceControlBlueprint.swift */,
+				0D9CA3A48CCD66B69846FC97CF3ED61D /* TestHierarchy.swift */,
+				57963984592C29F715FAF9D3013BF581 /* Trigger.swift */,
+				318CF5A37EFD900C65ECCA814380160C /* TriggerConditions.swift */,
+				77C7520B1821A470CDA3C12AD6D84E22 /* XcodeServer.swift */,
+				A7109A56E3875DA937B217B93B272332 /* XcodeServer+Auth.swift */,
+				F96AD7F1A3CC2E6C5A331F51A978CBD0 /* XcodeServer+Bot.swift */,
+				F6F2D3DD0EE8E3C78C2FE390FB27A33A /* XcodeServer+Device.swift */,
+				A8A2763CD5487E708ADC800F13EC6591 /* XcodeServer+Integration.swift */,
+				F7044FB8E55712FA158D6A2EA4348A76 /* XcodeServer+LiveUpdates.swift */,
+				8B9ED766615830C5D6831F474E919022 /* XcodeServer+Miscs.swift */,
+				A0DD1F708368E2000DE09605A98B9429 /* XcodeServer+Platform.swift */,
+				1ABB7E0A32D15F6B7F4CEC0B2A52ADA6 /* XcodeServer+Repository.swift */,
+				11F203F0C8BD6828B3E19B1E12009E77 /* XcodeServer+SCM.swift */,
+				C800532516E6AC37B17572D1B1B8F786 /* XcodeServerConfig.swift */,
+				4A380003D3FF57ADAE8166873FFDA06A /* XcodeServerConstants.swift */,
+				DD4DCD20EE04D5B4E2816758533BCF0D /* XcodeServerEndpoints.swift */,
+				393E4AB880D7D0B8956854168F4AB732 /* XcodeServerEntity.swift */,
+				ACA510A5DACEB39AE719D2A17E54F5B7 /* XcodeServerFactory.swift */,
+				F847C5AD9A0F288CB04E6C65372D05F9 /* Support Files */,
+			);
+			path = XcodeServerSDK;
+			sourceTree = "<group>";
+		};
+		3B507B5CA554A3648AFDBD24F3AE7D1B /* BuildaUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4DE8962B2554C1AC2234158DF42438A9 /* Availability.swift */,
+				0306B620EF2EE3DE5DD5F917598E99C7 /* ContainerExtensions.swift */,
+				B4D95A5AA1F3E4C7EE53A38D9796B1AC /* Errors.swift */,
+				CDB1ABC223270E9D6D618192B8D4C749 /* Extensions.swift */,
+				4BE2080003D6B02A58912012830EEFCC /* HTTPUtils.swift */,
+				7ACA5E778269E340646CA418DAD3EA93 /* JSON.swift */,
+				42CB51D9B48BA76EA2B9971891601C1C /* Logging.swift */,
+				4E74EB4AD067E8618B89D49F5D626C46 /* Ref.swift */,
+				1466FE919182815EE4F99FDD751C6FA3 /* Script.swift */,
+				CFD11BDCE3EBDE75B0B22A1048FB19CA /* Server.swift */,
+				F084883DD475EBA1E3F9910CD4A02E29 /* TimeUtils.swift */,
+				C501D0AB2A9A3ADB67926151DE623270 /* Support Files */,
+			);
+			path = BuildaUtils;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
+				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
+				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				0AC4442877CE1D8F038D5E3041316C40 /* Frameworks */,
+				C3E64E52604E729AF56B05C0E6C42A85 /* Pods */,
+				D054E547DD0D8366117FB13DC9B33F24 /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA1A711B18B285B24589153D5F8AA8E5 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CE04D181FD5129D0FACC107D6F3D481A /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		C3E64E52604E729AF56B05C0E6C42A85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B507B5CA554A3648AFDBD24F3AE7D1B /* BuildaUtils */,
+				1D8AAEB4415722A8A49F6B5533AF4AAB /* XcodeServerSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C501D0AB2A9A3ADB67926151DE623270 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E064C700909767B6C962C3653FAB04F /* BuildaUtils.modulemap */,
+				C06ADA15FA95176F3A0EA24CAC833448 /* BuildaUtils.xcconfig */,
+				8A9F0C9B05BCFE3DEA71484096FE4609 /* BuildaUtils-dummy.m */,
+				F27D065BF1FA9F1FEED546E45595D3DC /* BuildaUtils-prefix.pch */,
+				FF0578F275FA6461263E467C8FD6351A /* BuildaUtils-umbrella.h */,
+				4021EBC8C3D2FAC2CE74556966BBDC74 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BuildaUtils";
+			sourceTree = "<group>";
+		};
+		D054E547DD0D8366117FB13DC9B33F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFB7698D28B3D3D03BA7459E398CB0FD /* BuildaUtils.framework */,
+				C789411490B4F836E13A19794B88C3FE /* Pods.framework */,
+				3AFDE66F587391D1EB1EFEB649F0A2B5 /* XcodeServerSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F847C5AD9A0F288CB04E6C65372D05F9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E95BD9B397F85422FBFB2EABC1E8044 /* Info.plist */,
+				C457D547F72E438771E03159E82DE9BA /* XcodeServerSDK.modulemap */,
+				EB7A172AA750AB402B4711B32C14652A /* XcodeServerSDK.xcconfig */,
+				A14B1508D9BDA1F58A5056335BC49B59 /* XcodeServerSDK-dummy.m */,
+				62525D6EC3CAB306A4548B4A3447B289 /* XcodeServerSDK-prefix.pch */,
+				F908B50E5CCC58127221E7A1ED34BE38 /* XcodeServerSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XcodeServerSDK";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A792A459BE3F054C44DCB47DBE45C1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB136B2695D4CEDFA37ECD487B6956AC /* BuildaUtils-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA637EFFADB2EAF678E5C1C2639CB54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33779DC95CA5EC3D5D4D61E19879EB /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E900854547211A534432E2A7497D8C56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4CD86C0A64FCECD8C064D3ED5C2BDE8 /* XcodeServerSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		62A6B86921EFE530108D4E62627218CD /* BuildaUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B36E6578A4B07AF338FA5F579BDA6F /* Build configuration list for PBXNativeTarget "BuildaUtils" */;
+			buildPhases = (
+				569B449F269E9D117CFA7B0E2E6000F1 /* Sources */,
+				E4511C0AD5CAE534E5561E1A12AAFFF5 /* Frameworks */,
+				5A792A459BE3F054C44DCB47DBE45C1C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuildaUtils;
+			productName = BuildaUtils;
+			productReference = DFB7698D28B3D3D03BA7459E398CB0FD /* BuildaUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AD41009AA037E8AC58FEB106F7973C40 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BC95049881DEF66FF2C5C81D04CBDB7 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				B5878E4C8D474F0B47D7554ED107C7AC /* Sources */,
+				05F05197B7BE39E9A4F2D77266027AED /* Frameworks */,
+				BCA637EFFADB2EAF678E5C1C2639CB54 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				149EDE2191FD98F0494AA65491A29C1C /* PBXTargetDependency */,
+				F4851DB6BBE2E9582632FE101A4A43CF /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = C789411490B4F836E13A19794B88C3FE /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9548A9EE9926C91F2109392C3606D47 /* XcodeServerSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E41F3DDDA89577BAF2157D44C6ABC2A /* Build configuration list for PBXNativeTarget "XcodeServerSDK" */;
+			buildPhases = (
+				F75AA3A4D911710CDFD431BEC2438D32 /* Sources */,
+				0D5876AD2BC58C299C523E9602C2D358 /* Frameworks */,
+				E900854547211A534432E2A7497D8C56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94E44A0E59A3B98B953E9A39538DEA34 /* PBXTargetDependency */,
+			);
+			name = XcodeServerSDK;
+			productName = XcodeServerSDK;
+			productReference = 3AFDE66F587391D1EB1EFEB649F0A2B5 /* XcodeServerSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D054E547DD0D8366117FB13DC9B33F24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62A6B86921EFE530108D4E62627218CD /* BuildaUtils */,
+				AD41009AA037E8AC58FEB106F7973C40 /* Pods */,
+				C9548A9EE9926C91F2109392C3606D47 /* XcodeServerSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		569B449F269E9D117CFA7B0E2E6000F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C07438DF474F9A6422C59DD15F6F210 /* Availability.swift in Sources */,
+				4E74570828E113250CE546CF31CBCDC8 /* BuildaUtils-dummy.m in Sources */,
+				B605C27B46203FC8F190DFFA25E37473 /* ContainerExtensions.swift in Sources */,
+				056E6CA25F653F609292F6E3F0EE2069 /* Errors.swift in Sources */,
+				9F19570EFB8BC3DBAC6A2108362B3687 /* Extensions.swift in Sources */,
+				BFF6A078ADFC8296513FABEDDA3DF6D9 /* HTTPUtils.swift in Sources */,
+				5D6B9F98EEA67D8020BED5B9EBF42776 /* JSON.swift in Sources */,
+				2894AD2D549816D2CF8A66769118BF79 /* Logging.swift in Sources */,
+				633B98CEC44B39272B6F3E54ACA96F05 /* Ref.swift in Sources */,
+				A33EAA9F017E8F51CCF47DC72BC45380 /* Script.swift in Sources */,
+				081361064C9E6E4D73F6E43683CCD17B /* Server.swift in Sources */,
+				20F53C33B887C4716C661015EAC6C633 /* TimeUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5878E4C8D474F0B47D7554ED107C7AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45395CC154133935B62FF29941BA0A8 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F75AA3A4D911710CDFD431BEC2438D32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB32338881FBB11201C35D0437D8E897 /* Bot.swift in Sources */,
+				5539D6C3A20580496ED68078402CEB7E /* BotConfiguration.swift in Sources */,
+				CB84DEC4CAF7A70093A41357147BC014 /* BotSchedule.swift in Sources */,
+				467D34A1718C1ED5F354330A664ACFFC /* CIServer.swift in Sources */,
+				6AE58B15D0BDF7EDD7234853EE0660BE /* Commit.swift in Sources */,
+				1C4E465ED282C2410F651A31F4140809 /* Contributor.swift in Sources */,
+				2735CD6428F2EE0D20D4CA77465B5AF4 /* Device.swift in Sources */,
+				C083F1B4193576EC1EDF6441E9610D57 /* DeviceSpecification.swift in Sources */,
+				1EBDC0085F3A5A287F9A77FACB579C6D /* EmailConfiguration.swift in Sources */,
+				BE3BCF920BB48EF427DE424A0C22BDCD /* File.swift in Sources */,
+				8A31DCEC0A56BFA4445DD3444C7D2970 /* Integration.swift in Sources */,
+				1EC86D4F092424A93DF768B1A4CCB201 /* IntegrationCommits.swift in Sources */,
+				D37917513B7ED7E8FFC674273BE3C7A2 /* IntegrationIssue.swift in Sources */,
+				D697A7DDBE75C68C2A1EB6C4D343FAFA /* IntegrationIssues.swift in Sources */,
+				277879481C6E286314C0895907675D5B /* LiveUpdateMessage.swift in Sources */,
+				CF15B7FC340C832208CE5995CFA4035A /* Repository.swift in Sources */,
+				51E0DE101787FBC31EE927A51F59994A /* SocketIOHelper.swift in Sources */,
+				6919870CC722D14AEA2A459257796C45 /* SourceControlBlueprint.swift in Sources */,
+				E92BA4DE4B2D6825A7BBB80475FA7599 /* TestHierarchy.swift in Sources */,
+				47BC46C7D281A4A167D67CBCE5F3A64C /* Trigger.swift in Sources */,
+				E85CC34E68B3F14253B455E4500D07B2 /* TriggerConditions.swift in Sources */,
+				36B01D94FE6EE72B509BEC535451303C /* XcodeServer+Auth.swift in Sources */,
+				08BF7C579C89AD3AA804B0EA7742C220 /* XcodeServer+Bot.swift in Sources */,
+				29987C2C59F8070AE737FA8660BB8832 /* XcodeServer+Device.swift in Sources */,
+				D1EE469BCA2433ECE00AF493846CA978 /* XcodeServer+Integration.swift in Sources */,
+				879A2993967C7E98E35878D8157EB9A2 /* XcodeServer+LiveUpdates.swift in Sources */,
+				499D976AC01D59ABC70D6D3F784CEBF2 /* XcodeServer+Miscs.swift in Sources */,
+				07724519D1731D2F123A8D5B9530A4E8 /* XcodeServer+Platform.swift in Sources */,
+				3B994611608639D048DFE4AA7F0BAD6F /* XcodeServer+Repository.swift in Sources */,
+				088718BB2EB68236AEF1CE604E894FC5 /* XcodeServer+SCM.swift in Sources */,
+				F6136C4AF436C3DC73F47D617D4A00E0 /* XcodeServer.swift in Sources */,
+				03A2C753BF44F4CD304F6F1F1DD75E62 /* XcodeServerConfig.swift in Sources */,
+				341188E99B09A30FDA775EDFD5335825 /* XcodeServerConstants.swift in Sources */,
+				F048F72BFC56D9CB19D893B0175935F3 /* XcodeServerEndpoints.swift in Sources */,
+				BD17C3ABD2F2713296FCBA81F93D3B47 /* XcodeServerEntity.swift in Sources */,
+				DF81354AC3F6576D9E40236179888E8A /* XcodeServerFactory.swift in Sources */,
+				76E2CEB33FDDB725E83B7EF6BF7D0AD3 /* XcodeServerSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		149EDE2191FD98F0494AA65491A29C1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BuildaUtils;
+			target = 62A6B86921EFE530108D4E62627218CD /* BuildaUtils */;
+			targetProxy = 5AFB0591D840FDEE056018F9590BD9DA /* PBXContainerItemProxy */;
+		};
+		94E44A0E59A3B98B953E9A39538DEA34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BuildaUtils;
+			target = 62A6B86921EFE530108D4E62627218CD /* BuildaUtils */;
+			targetProxy = 8C02FA5B8A8066829C9887DD18EAF305 /* PBXContainerItemProxy */;
+		};
+		F4851DB6BBE2E9582632FE101A4A43CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XcodeServerSDK;
+			target = C9548A9EE9926C91F2109392C3606D47 /* XcodeServerSDK */;
+			targetProxy = D3B3C7BD8A06E1CD886A2CAA06BD06E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06A184295738A1CC2CFED77D656EFEF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06ADA15FA95176F3A0EA24CAC833448 /* BuildaUtils.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/BuildaUtils/BuildaUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuildaUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/BuildaUtils/BuildaUtils.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BuildaUtils;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10B2EE21B5D67EE2C819831CCC43832B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		37C3368393EC326B6031E59AA607FF1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06ADA15FA95176F3A0EA24CAC833448 /* BuildaUtils.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/BuildaUtils/BuildaUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuildaUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/BuildaUtils/BuildaUtils.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BuildaUtils;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C07D96CC7C445E83983A6C6420BC692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		925FDF6B6108C18C41D8307557F2493E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7A172AA750AB402B4711B32C14652A /* XcodeServerSDK.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/XcodeServerSDK/XcodeServerSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XcodeServerSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/XcodeServerSDK/XcodeServerSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XcodeServerSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A42FC86FFC42C4043DB5A95C54FADD45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F5F5A6090913DEEB1904A6DD4E455ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7A172AA750AB402B4711B32C14652A /* XcodeServerSDK.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/XcodeServerSDK/XcodeServerSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XcodeServerSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/XcodeServerSDK/XcodeServerSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XcodeServerSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC45DAF467E67E17C7EE607F92CB62AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BC95049881DEF66FF2C5C81D04CBDB7 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC45DAF467E67E17C7EE607F92CB62AC /* Debug */,
+				A42FC86FFC42C4043DB5A95C54FADD45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B2EE21B5D67EE2C819831CCC43832B /* Debug */,
+				7C07D96CC7C445E83983A6C6420BC692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E41F3DDDA89577BAF2157D44C6ABC2A /* Build configuration list for PBXNativeTarget "XcodeServerSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925FDF6B6108C18C41D8307557F2493E /* Debug */,
+				F5F5A6090913DEEB1904A6DD4E455ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B36E6578A4B07AF338FA5F579BDA6F /* Build configuration list for PBXNativeTarget "BuildaUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37C3368393EC326B6031E59AA607FF1E /* Debug */,
+				06A184295738A1CC2CFED77D656EFEF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

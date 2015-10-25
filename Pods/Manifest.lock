@@ -1,0 +1,13 @@
+PODS:
+  - BuildaUtils (0.2.3)
+  - XcodeServerSDK (0.5.2):
+    - BuildaUtils (~> 0.2.3)
+
+DEPENDENCIES:
+  - XcodeServerSDK
+
+SPEC CHECKSUMS:
+  BuildaUtils: ea53e9781ddd764d525b1c3bb98f68e22cc58170
+  XcodeServerSDK: af33ec632aef355307489f9633aea78b59be0504
+
+COCOAPODS: 0.39.0
