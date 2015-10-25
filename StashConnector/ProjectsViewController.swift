@@ -62,12 +62,12 @@ class DataProvider {
                 project.repositories = values.map { value in
                     StashRepository(withJSON: value)
                 }
-                self.listRepositoriesPerProject()
+                self.getBranches()
             }
         }
     }
     
-    private func listRepositoriesPerProject() {
+    private func getBranches() {
         var projectCount = 0
         projects.forEach { project in
             var repositoryCount = 0
