@@ -27,7 +27,7 @@ class ProjectsViewController: NSViewController {
 class DataProvider {
     
     private var projects = [StashProject]()
-    private var repositories = [StashRepository]()
+    private var dataStream = DataIOStream()
     
     func run() {
         getProjects()
@@ -35,10 +35,7 @@ class DataProvider {
     
     private func getProjects() {
         StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
-            guard let json = json else {
-                print(error)
-                return
-            }
+            guard let json = json else { return }
             
             if let values = json["values"].array {
                 self.projects = values.map { value in
@@ -51,16 +48,16 @@ class DataProvider {
     
     private func getRepositories() {
         projects.forEach { project in
-            self.getRepository(forProject: project)
+            self.getRepositories(forProject: project)
         }
     }
     
-    private func getRepository(forProject project: StashProject) {
+    private func getRepositories(forProject project: StashProject) {
         StashNetworking.request(withEndpoint: Endpoint.Repos(projectKey: project.key)) { (json, error) in
             guard let json = json else { return }
             
             if let values = json["values"].array {
-                self.repositories = values.map { value in
+                project.repositories = values.map { value in
                     StashRepository(withJSON: value)
                 }
                 self.listRepositoriesPerProject()
@@ -69,21 +66,24 @@ class DataProvider {
     }
     
     private func listRepositoriesPerProject() {
+        var projectCount = 0
         projects.forEach { project in
-            let projectRepos = self.repositories.filter { repository in
-                repository.projectid == project.id
-            }
-            projectRepos.forEach{ repository in
+            var repositoryCount = 0
+            project.repositories.forEach { repository in
                 StashNetworking.request(withEndpoint: Endpoint.Branches(projectKey: project.key, repositorySlug: repository.slug)) { json, error in
                     guard let json = json else { return }
                     
                     if let values = json["values"].array {
-                        let branches = values.map { value in
+                        repository.branches = values.map { value in
                             StashBranch(withJSON: value)
                         }
-                        print(project)
-                        print(projectRepos)
-                        print(branches)
+                    }
+                    repositoryCount++
+                    if (repositoryCount == project.repositories.count) {
+                        projectCount++
+                        if (projectCount == self.projects.count) {
+                            self.dataStream.writeLog(self.projects)
+                        }
                     }
                 }
             }
@@ -91,3 +91,41 @@ class DataProvider {
     }
 
 }
+
+private class DataIOStream {
+    
+    private var logPath: NSURL {
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory: String = paths[0]
+        let directoryURL = NSURL(string: documentsDirectory)!.URLByAppendingPathComponent("StashConnector")
+        let logPathURL = directoryURL.URLByAppendingPathComponent("Logs")
+        if NSFileManager.defaultManager().fileExistsAtPath(logPathURL.absoluteString) {
+            return logPathURL
+        }
+        do {
+            try NSFileManager.defaultManager().createDirectoryAtPath(logPathURL.absoluteString, withIntermediateDirectories: true, attributes: nil)
+            return logPathURL
+        } catch let error as NSError {
+            print(error.localizedDescription);
+        }
+        return NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("Logs")
+    }
+    
+    func writeLog(projects: [StashProject]) {
+        let joined: String = projects.reduce("") { string, project in
+            return string + "\(project.toJSON())\n"
+        }
+        
+        do {
+            let projectsPath = logPath.URLByAppendingPathComponent("projects.log").absoluteString
+            if !NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
+                NSFileManager.defaultManager().createFileAtPath(projectsPath, contents: nil, attributes: nil)
+            }
+            try joined.writeToFile(projectsPath, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch {
+            // handle error
+        }
+    }
+}
+
+
