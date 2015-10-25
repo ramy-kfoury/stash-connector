@@ -26,15 +26,16 @@ class ProjectsViewController: NSViewController {
 
 class DataProvider {
     
+    private var savedToDiskProjects = [StashProject]()
     private var projects = [StashProject]()
     private var dataStream = DataIOStream()
     
     func run() {
+        dataStream.readLog()
         getProjects()
     }
     
     private func getProjects() {
-        dataStream.readLog()
         StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
             guard let json = json else { return }
             
@@ -140,7 +141,14 @@ private class DataIOStream {
             if NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
                 let contents = try String(contentsOfFile: projectsPath, encoding: NSUTF8StringEncoding)
                 let json = JSON(data: contents.dataUsingEncoding(NSUTF8StringEncoding)!)
-                print(json)
+                if let projectsJSON = json.array {
+                    let projects = projectsJSON.map { value in
+                        StashProject(withJSON: value)
+                    }
+                    projects.forEach {
+                        print($0.toJSON())
+                    }
+                }
             }
         } catch {
             // handle error

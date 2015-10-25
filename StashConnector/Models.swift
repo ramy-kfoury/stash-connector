@@ -23,7 +23,14 @@ class StashProject {
         self.name = json["name"].string ?? ""
         self.description = json["description"].string ?? ""
         self.link = json["links"]["self"][0]["href"].string ?? ""
-        self.repositories = [StashRepository]()
+        if let jsonRepositories = json["repositories"].array {
+            let mappedRepos = jsonRepositories.map { json in
+                StashRepository(withJSON: json)
+            }
+            self.repositories = mappedRepos
+        } else {
+            self.repositories = [StashRepository]()
+        }
     }
     
     
@@ -46,7 +53,14 @@ class StashRepository {
         self.slug = json["slug"].string ?? ""
         self.id = json["id"].int ?? NSNotFound
         self.projectid = json["project"]["id"].int ?? NSNotFound
-        self.branches = [StashBranch]()
+        if let jsonBranches = json["branches"].array {
+            let mappedBranches = jsonBranches.map { json in
+                StashBranch(withJSON: json)
+            }
+            self.branches = mappedBranches
+        } else {
+            self.branches = [StashBranch]()
+        }
     }
     
     func toJSON() -> [String: AnyObject] {
