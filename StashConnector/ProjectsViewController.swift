@@ -19,7 +19,10 @@ class ProjectsViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "getProjects", userInfo: nil, repeats: true).fire()
+    }
+    
+    func getProjects() {
         StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
             guard let json = json else {
                 print(error)
