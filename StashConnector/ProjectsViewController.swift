@@ -42,7 +42,7 @@ class ProjectsViewController: NSViewController {
     }
     
     private func getRepository(forProject project: StashProject) {
-        StashNetworking.request(withEndpoint: Endpoint.Repos(endpoint: .Projects, projectKey: project.key)) { (json, error) in
+        StashNetworking.request(withEndpoint: Endpoint.Repos(projectKey: project.key)) { (json, error) in
             guard let json = json else { return }
             
             if let values = json["values"].array {
@@ -56,10 +56,23 @@ class ProjectsViewController: NSViewController {
     
     private func listRepositoriesPerProject() {
         projects.forEach { project in
-            let repositories = self.repositories.filter { repository in
+            let projectRepos = self.repositories.filter { repository in
                 repository.projectid == project.id
             }
-            print(project, repositories)
+            projectRepos.forEach{ repository in
+                StashNetworking.request(withEndpoint: Endpoint.Branches(projectKey: project.key, repositorySlug: repository.slug)) { json, error in
+                    guard let json = json else { return }
+
+                    if let values = json["values"].array {
+                        let branches = values.map { value in
+                            StashBranch(withJSON: value)
+                        }
+                        print(project)
+                        print(projectRepos)
+                        print(branches)
+                    }
+                }
+            }
         }
     }
     

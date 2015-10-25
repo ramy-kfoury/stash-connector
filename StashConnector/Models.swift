@@ -36,3 +36,17 @@ struct StashRepository {
         self.projectid = json["project"]["id"].int ?? NSNotFound
     }
 }
+
+struct StashBranch {
+    let id: String
+    let latestCommit: String
+    let latestChangeset: String
+    let displayId: String
+    
+    init(withJSON json: JSON) {
+        self.id = json["id"].string ?? ""
+        self.latestCommit = json["latestCommit"].string ?? ""
+        self.latestChangeset = json["latestChangeset"].string ?? ""
+        self.displayId = json["displayId"].string ?? ""
+    }
+}

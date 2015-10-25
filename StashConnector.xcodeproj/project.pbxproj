@@ -10,7 +10,7 @@
 		26214FB91BDCC54800FA8558 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */; };
 		26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */; };
 		26823C521BDC2BD400114FAC /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C501BDC2BD400114FAC /* ProjectsViewController.swift */; };
-		26823C591BDC2DFF00114FAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C581BDC2DFF00114FAC /* Project.swift */; };
+		26823C591BDC2DFF00114FAC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C581BDC2DFF00114FAC /* Models.swift */; };
 		26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F011BDC16E1006F3D27 /* AppDelegate.swift */; };
 		26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F031BDC16E1006F3D27 /* Assets.xcassets */; };
 		26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A51F051BDC16E1006F3D27 /* MainMenu.xib */; };
@@ -40,7 +40,7 @@
 		26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		26823C501BDC2BD400114FAC /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
-		26823C581BDC2DFF00114FAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		26823C581BDC2DFF00114FAC /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		26A51EFE1BDC16E1006F3D27 /* StashConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A51F011BDC16E1006F3D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26A51F031BDC16E1006F3D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */,
-				26823C581BDC2DFF00114FAC /* Project.swift */,
+				26823C581BDC2DFF00114FAC /* Models.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				26A51F021BDC16E1006F3D27 /* AppDelegate.swift in Sources */,
 				26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */,
 				26214FB91BDCC54800FA8558 /* SwiftyJSON.swift in Sources */,
-				26823C591BDC2DFF00114FAC /* Project.swift in Sources */,
+				26823C591BDC2DFF00114FAC /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

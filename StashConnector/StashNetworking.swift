@@ -48,12 +48,18 @@ private class StashRequestBuilder {
 
 indirect enum Endpoint {
     case Projects
-    case Repos(endpoint: Endpoint, projectKey: String)
+    case Repos(projectKey: String)
+    case Changes(projectKey: String, repositorySlug: String)
+    case Commits(projectKey: String, repositorySlug: String)
+    case Branches(projectKey: String, repositorySlug: String)
     
     var path : String {
         switch self {
         case .Projects: return "projects"
-        case let Repos(endpoint, projectKey): return "\(endpoint.path)/\(projectKey)/repos"
+        case let Repos(projectKey): return "\(Endpoint.Projects.path)/\(projectKey)/repos"
+        case let Changes(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/changes"
+        case let Commits(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/commits"
+        case let Branches(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/branches"
         }
     }
 }
