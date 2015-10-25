@@ -16,7 +16,7 @@ class ProjectsViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "getData", userInfo: nil, repeats: true).fire()
+        NSTimer.scheduledTimerWithTimeInterval(15, target: self, selector: "getData", userInfo: nil, repeats: true).fire()
     }
     
     func getData() {
@@ -31,7 +31,7 @@ class DataProvider {
     private var dataStream = DataIOStream()
     
     func run() {
-        dataStream.readLog()
+        savedToDiskProjects.appendContentsOf(dataStream.readLog())
         getProjects()
     }
     
@@ -70,6 +70,7 @@ class DataProvider {
     private func getBranches() {
         var projectCount = 0
         projects.forEach { project in
+            let savedProject = self.savedToDiskProjects.filter({ $0.key == project.key }).first
             var repositoryCount = 0
             project.repositories.forEach { repository in
                 StashNetworking.request(withEndpoint: Endpoint.Branches(projectKey: project.key, repositorySlug: repository.slug)) { json, error in
@@ -80,6 +81,18 @@ class DataProvider {
                             StashBranch(withJSON: value)
                         }
                     }
+                    
+                    if let savedProject = savedProject {
+                        project.repositories.forEach { repository in
+                            let fetchedBranches = Set(repository.branches.map({ $0.id }))
+                            if let savedRepository = savedProject.repositories.filter({ $0.slug == repository.slug }).first {
+                                let savedBranches = Set(savedRepository.branches.map({ $0.id }))
+                                let newBranches = fetchedBranches.subtract(savedBranches)
+                                print("newBranches: \(newBranches)")
+                            }
+                        }
+                    }
+                    
                     repositoryCount++
                     if (repositoryCount == project.repositories.count) {
                         projectCount++
@@ -135,7 +148,7 @@ private class DataIOStream {
         
     }
     
-    func readLog() -> [StashProject]? {
+    func readLog() -> [StashProject] {
         do {
             let projectsPath = logPath.URLByAppendingPathComponent("projects.log").absoluteString
             if NSFileManager.defaultManager().fileExistsAtPath(projectsPath) {
@@ -145,15 +158,13 @@ private class DataIOStream {
                     let projects = projectsJSON.map { value in
                         StashProject(withJSON: value)
                     }
-                    projects.forEach {
-                        print($0.toJSON())
-                    }
+                    return projects
                 }
             }
         } catch {
             // handle error
         }
-        return nil
+        return [StashProject]()
     }
 }
 

@@ -36,6 +36,7 @@ class StashProject {
     
     func toJSON() -> [String: AnyObject] {
         return [
+            "key": key,
             "name": name,
             "repositories": repositories.map({ $0.toJSON() })
         ]
