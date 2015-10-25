@@ -24,3 +24,15 @@ struct StashProject {
         self.link = json["links"]["self"][0]["href"].string ?? ""
     }
 }
+
+struct StashRepository {
+    let id: Int
+    let slug: String
+    let projectid: Int
+    
+    init(withJSON json: JSON) {
+        self.slug = json["slug"].string ?? ""
+        self.id = json["id"].int ?? NSNotFound
+        self.projectid = json["project"]["id"].int ?? NSNotFound
+    }
+}

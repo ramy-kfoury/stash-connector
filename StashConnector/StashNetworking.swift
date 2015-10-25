@@ -22,7 +22,7 @@ private class StashURLBuilder {
         components.scheme = Constants.scheme
         components.host = Constants.host
         components.port = Constants.port
-        components.path = "\(Constants.apiPath)\(endpoint.rawValue)"
+        components.path = "\(Constants.apiPath)\(endpoint.path)"
         return components.URL
     }
 }
@@ -46,8 +46,16 @@ private class StashRequestBuilder {
     
 }
 
-enum Endpoint: String {
-    case Projects = "projects"
+indirect enum Endpoint {
+    case Projects
+    case Repos(endpoint: Endpoint, projectKey: String)
+    
+    var path : String {
+        switch self {
+        case .Projects: return "projects"
+        case let Repos(endpoint, projectKey): return "\(endpoint.path)/\(projectKey)/repos"
+        }
+    }
 }
 
 typealias StashNetworkingCompletion = (JSON?, ErrorType?) -> Void

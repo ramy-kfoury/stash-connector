@@ -9,8 +9,9 @@
 import Cocoa
 
 class ProjectsViewController: NSViewController {
-
+    
     private var projects = [StashProject]()
+    private var repositories = [StashRepository]()
     
     static func instance() -> ProjectsViewController {
         return ProjectsViewController(nibName: "ProjectsViewController", bundle: nil)!
@@ -29,13 +30,37 @@ class ProjectsViewController: NSViewController {
                 self.projects = values.map { value in
                     StashProject(withJSON: value)
                 }
-                self.listProjects()
+                self.getRepositories()
             }
         }
     }
     
-    private func listProjects() {
-        print(projects);
+    private func getRepositories() {
+        projects.forEach { project in
+            self.getRepository(forProject: project)
+        }
+    }
+    
+    private func getRepository(forProject project: StashProject) {
+        StashNetworking.request(withEndpoint: Endpoint.Repos(endpoint: .Projects, projectKey: project.key)) { (json, error) in
+            guard let json = json else { return }
+            
+            if let values = json["values"].array {
+                self.repositories = values.map { value in
+                    StashRepository(withJSON: value)
+                }
+                self.listRepositoriesPerProject()
+            }
+        }
+    }
+    
+    private func listRepositoriesPerProject() {
+        projects.forEach { project in
+            let repositories = self.repositories.filter { repository in
+                repository.projectid == project.id
+            }
+            print(project, repositories)
+        }
     }
     
 }
