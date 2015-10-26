@@ -71,9 +71,8 @@ class StashNetworking {
     
     static func request(withEndpoint endpoint: Endpoint, completion: StashNetworkingCompletion) {
         if let url = StashURLBuilder.build(endpoint), request = StashRequestBuilder.build(url) {
-    
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            print(url)
+            MyURLSession().httpGet(request, callback: { (data, error) -> Void in
                 if let error = error {
                     print("error: \(error.localizedDescription): \(error.userInfo)")
                 }
@@ -82,12 +81,45 @@ class StashNetworking {
                     completion(json, nil)
                 }
             })
-            
-            task.resume()
         }
         else {
             print("Unable to create NSURL")
         }
 
+    }
+}
+
+class MyURLSession: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+    typealias CallbackBlock = (data: NSData?, error: NSError?) -> Void
+    var callback: CallbackBlock = {
+        (data, error) -> Void in
+        if error == nil {
+            
+        } else {
+            print(error)
+        }
+    }
+    
+    func httpGet(request: NSURLRequest!, callback: CallbackBlock) {
+            let configuration =
+            NSURLSessionConfiguration.defaultSessionConfiguration()
+            let session = NSURLSession(configuration: configuration,
+                delegate: self,
+                delegateQueue:NSOperationQueue.mainQueue())
+            let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+                callback(data: data, error: error)
+            }
+            task.resume()
+    }
+    
+    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+            completionHandler(
+                NSURLSessionAuthChallengeDisposition.UseCredential,
+                NSURLCredential(forTrust:
+                    challenge.protectionSpace.serverTrust!))
+    }
+    
+    func URLSession(session: NSURLSession, task: NSURLSessionTask, willPerformHTTPRedirection response: NSHTTPURLResponse, newRequest request: NSURLRequest, completionHandler: (NSURLRequest?) -> Void) {
+            completionHandler(request)
     }
 }
