@@ -10,32 +10,50 @@ import Foundation
 
 private class StashURLBuilder {
     
-    struct Constants {
-        private static let scheme = "http"
-        private static let host = "localhost"
-        private static let port = 7990
-        private static let apiPath = "/rest/api/1.0/"
+    struct Personal {
+        struct Constants {
+            private static let scheme = "http"
+            private static let host = "localhost"
+            private static let port = 7990
+            private static let apiPath = "/rest/api/1.0/"
+        }
+    }
+    
+    struct Work {
+        struct Constants {
+            private static let scheme = "https"
+            private static let host = "stash.zalando.net"
+            private static let port = 7990
+            private static let apiPath = "/rest/api/1.0/"
+        }
     }
  
     static func build(endpoint: Endpoint) -> NSURL? {
         let components = NSURLComponents()
-        components.scheme = Constants.scheme
-        components.host = Constants.host
-        components.port = Constants.port
-        components.path = "\(Constants.apiPath)\(endpoint.path)"
+        components.scheme = Work.Constants.scheme
+        components.host = Work.Constants.host
+        components.path = "\(Work.Constants.apiPath)\(endpoint.path)"
         return components.URL
     }
 }
 
 private class StashRequestBuilder {
     
+    struct Personal {
+        struct Constants {
+            private static let username = "ramy_kfoury"
+            private static let password = "password"
+        }
+    }
+    struct Work {
     struct Constants {
-        private static let username = "ramy_kfoury"
-        private static let password = "password"
+        private static let username = ""
+        private static let password = ""
+    }
     }
     
     static func build(url: NSURL) -> NSURLRequest? {
-        let loginString = "\(Constants.username):\(Constants.password)"
+        let loginString = "\(Work.Constants.username):\(Work.Constants.password)"
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         let request = NSMutableURLRequest(URL: url)
@@ -48,7 +66,9 @@ private class StashRequestBuilder {
 
 indirect enum Endpoint {
     case Projects
+    case Project(projectKey: String)
     case Repos(projectKey: String)
+    case Repo(projectKey: String, repositorySlug: String)
     case Changes(projectKey: String, repositorySlug: String)
     case Commits(projectKey: String, repositorySlug: String)
     case Branches(projectKey: String, repositorySlug: String)
@@ -56,7 +76,9 @@ indirect enum Endpoint {
     var path : String {
         switch self {
         case .Projects: return "projects"
+        case let Project(projectKey): return "\(Endpoint.Projects.path)/\(projectKey)"
         case let Repos(projectKey): return "\(Endpoint.Projects.path)/\(projectKey)/repos"
+        case let Repo(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)"
         case let Changes(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/changes"
         case let Commits(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/commits"
         case let Branches(projectkey, repositorySlug): return "\(Endpoint.Repos(projectKey: projectkey).path)/\(repositorySlug)/branches"

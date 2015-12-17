@@ -24,16 +24,22 @@ class DataProvider {
     }
     
     private func getProjects() {
-        StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
+        StashNetworking.request(withEndpoint: .Project(projectKey: "shop-mobile")) { (json, error) -> Void in
             guard let json = json else { return }
-            
-            if let values = json["values"].array {
-                self.projects = values.map { value in
-                    StashProject(withJSON: value)
-                }
-                self.getRepositories()
-            }
+            let project = StashProject(withJSON: json)
+            self.projects.append(project)            
+            self.getRepositories()
         }
+//        StashNetworking.request(withEndpoint: .Projects) { (json, error) -> Void in
+//            guard let json = json else { return }
+//            
+//            if let values = json["values"].array {
+//                self.projects = values.map { value in
+//                    StashProject(withJSON: value)
+//                }
+//                self.getRepositories()
+//            }
+//        }
     }
     
     private func getRepositories() {
@@ -43,16 +49,22 @@ class DataProvider {
     }
     
     private func getRepositories(forProject project: StashProject) {
-        StashNetworking.request(withEndpoint: Endpoint.Repos(projectKey: project.key)) { (json, error) in
+        StashNetworking.request(withEndpoint: .Repo(projectKey: project.key, repositorySlug: "ios-app")) { (json, error) -> Void in
             guard let json = json else { return }
-            
-            if let values = json["values"].array {
-                project.repositories = values.map { value in
-                    StashRepository(withJSON: value)
-                }
-                self.getBranches()
-            }
+            let repository = StashRepository(withJSON: json)
+            project.repositories.append(repository)
+            self.getBranches()
         }
+//        StashNetworking.request(withEndpoint: Endpoint.Repos(projectKey: project.key)) { (json, error) in
+//            guard let json = json else { return }
+//            
+//            if let values = json["values"].array {
+//                project.repositories = values.map { value in
+//                    StashRepository(withJSON: value)
+//                }
+//                self.getBranches()
+//            }
+//        }
     }
     
     private func getBranches() {

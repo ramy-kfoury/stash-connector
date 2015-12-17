@@ -33,6 +33,15 @@ class StashProject {
         }
     }
     
+    init(key: String, id: Int, name: String, description: String, link: String) {
+        self.key = key
+        self.id = id
+        self.name = name
+        self.description = description
+        self.link = link
+        self.repositories = [StashRepository]()
+    }
+    
     
     func toJSON() -> [String: AnyObject] {
         return [

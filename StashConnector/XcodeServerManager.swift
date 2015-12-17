@@ -19,7 +19,7 @@ class XcodeServerManager {
     
     func connectToServer(completion: () -> Void) {
         do {
-            let config = try XcodeServerConfig(host: "https://myserver.local", user: "admin", password: "admin")
+            let config = try XcodeServerConfig(host: "https://rock-hudson.local", user: "hudson", password: "myhud$0n")
             self.server = XcodeServerFactory.server(config)
             
             self.server.getUserCanCreateBots({ canCreateBots, error in
@@ -69,6 +69,9 @@ class XcodeServerManager {
     }
 
     private func createBot(forBranch branch: String) {
+        // TODO get master bot
+        // duplicate it
+        // create bot for new branch
         print("creating bot for branch \(branch)")
     }
     

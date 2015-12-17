@@ -17,6 +17,7 @@
 		26A51F121BDC16E1006F3D27 /* StashConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F111BDC16E1006F3D27 /* StashConnectorTests.swift */; };
 		26A51F1D1BDC16E1006F3D27 /* StashConnectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */; };
 		26A51F2B1BDC219F006F3D27 /* StashNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */; };
+		26DFCB051BE0F43200F635A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DFCB041BE0F43200F635A2 /* Main.storyboard */; };
 		26F2B6031BDD0D3F001E43DD /* XcodeServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */; };
 		26F2B6051BDD1114001E43DD /* ProjectsSyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2B6041BDD1114001E43DD /* ProjectsSyncer.swift */; };
 		CF33F64638ABAE8415168611 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3BE655DEF709FA12FA512C /* Pods.framework */; };
@@ -57,6 +58,7 @@
 		26A51F1C1BDC16E1006F3D27 /* StashConnectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashConnectorUITests.swift; sourceTree = "<group>"; };
 		26A51F1E1BDC16E1006F3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A51F2A1BDC219F006F3D27 /* StashNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StashNetworking.swift; sourceTree = "<group>"; };
+		26DFCB041BE0F43200F635A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerManager.swift; sourceTree = "<group>"; };
 		26F2B6041BDD1114001E43DD /* ProjectsSyncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsSyncer.swift; sourceTree = "<group>"; };
 		868F3B310621EB39A8B22593 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				26823C501BDC2BD400114FAC /* ProjectsViewController.swift */,
 				26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */,
 				26F2B6021BDD0D3F001E43DD /* XcodeServerManager.swift */,
+				26DFCB041BE0F43200F635A2 /* Main.storyboard */,
 				26F2B6041BDD1114001E43DD /* ProjectsSyncer.swift */,
 			);
 			name = Controllers;
@@ -306,6 +309,7 @@
 				26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */,
 				26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */,
 				26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */,
+				26DFCB051BE0F43200F635A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +523,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StashConnector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -532,6 +537,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StashConnector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.super.heated.neurons.StashConnector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
