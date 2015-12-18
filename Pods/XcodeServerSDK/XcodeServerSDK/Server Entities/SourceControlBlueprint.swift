@@ -25,8 +25,8 @@ public class SourceControlBlueprint : XcodeServerEntity {
     public let projectURL: String
     public let projectPath: String
     public let commitSHA: String?
-    public let privateSSHKey: String?
-    public let publicSSHKey: String?
+    public var privateSSHKey: String?
+    public var publicSSHKey: String?
     public let sshPassphrase: String?
     public var certificateFingerprint: String? = nil
     

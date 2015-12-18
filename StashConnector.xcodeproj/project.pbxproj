@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261C2C931C2306340099714F /* id_rsa in Resources */ = {isa = PBXBuildFile; fileRef = 261C2C921C2306340099714F /* id_rsa */; };
 		26214FB91BDCC54800FA8558 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */; };
 		26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */; };
 		26823C521BDC2BD400114FAC /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26823C501BDC2BD400114FAC /* ProjectsViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		06652BD3461FCD0DA761C6F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		261C2C921C2306340099714F /* id_rsa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = id_rsa; sourceTree = "<group>"; };
 		26214FB81BDCC54800FA8558 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		26214FBA1BDCCD8400FA8558 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		26823C501BDC2BD400114FAC /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		26823C551BDC2DD400114FAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				261C2C921C2306340099714F /* id_rsa */,
 				26A51F031BDC16E1006F3D27 /* Assets.xcassets */,
 				26A51F051BDC16E1006F3D27 /* MainMenu.xib */,
 				26A51F081BDC16E1006F3D27 /* Info.plist */,
@@ -306,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261C2C931C2306340099714F /* id_rsa in Resources */,
 				26A51F041BDC16E1006F3D27 /* Assets.xcassets in Resources */,
 				26214FBB1BDCCD8400FA8558 /* ProjectsViewController.xib in Resources */,
 				26A51F071BDC16E1006F3D27 /* MainMenu.xib in Resources */,

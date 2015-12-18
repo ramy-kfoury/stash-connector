@@ -209,5 +209,26 @@ extension XcodeServer {
             completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
         }
     }
+    
+    
+    public func duplicateBot(botID: String, json: NSDictionary, completion: (response: CreateBotResponse) -> ()) {
+        
+        self.sendRequestWithMethod(.POST, endpoint: .BotDuplicate, params: ["bot": botID], query: nil, body: json) { (response, body, error) -> () in
+            
+            if let error = error {
+                completion(response: XcodeServer.CreateBotResponse.Error(error: error))
+                return
+            }
+            
+            guard let dictBody = body as? NSDictionary else {
+                let e = Error.withInfo("Wrong body \(body)")
+                completion(response: XcodeServer.CreateBotResponse.Error(error: e))
+                return
+            }
+            
+            let bot = Bot(json: dictBody)
+            completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
+        }
+    }
 
 }

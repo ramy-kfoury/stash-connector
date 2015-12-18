@@ -12,6 +12,7 @@ import BuildaUtils
 public class XcodeServerEndpoints {
     
     enum Endpoint {
+        case BotDuplicate
         case Bots
         case CancelIntegration
         case Commits
@@ -46,6 +47,14 @@ public class XcodeServerEndpoints {
         let base = "/api"
         
         switch endpoint {
+         
+        case .BotDuplicate:
+            let bots = "\(base)/bots"
+            if let bot = params?["bot"] {
+                let bot = "\(bots)/\(bot)/duplicate"
+                return bot
+            }
+            return bots
             
         case .Bots:
             

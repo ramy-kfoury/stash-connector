@@ -10,50 +10,31 @@ import Foundation
 
 private class StashURLBuilder {
     
-    struct Personal {
-        struct Constants {
-            private static let scheme = "http"
-            private static let host = "localhost"
-            private static let port = 7990
-            private static let apiPath = "/rest/api/1.0/"
-        }
-    }
-    
-    struct Work {
-        struct Constants {
-            private static let scheme = "https"
-            private static let host = "stash.zalando.net"
-            private static let port = 7990
-            private static let apiPath = "/rest/api/1.0/"
-        }
+    struct Constants {
+        private static let scheme = "https"
+        private static let host = "stash.zalando.net"
+        private static let port = 7990
+        private static let apiPath = "/rest/api/1.0/"
     }
  
     static func build(endpoint: Endpoint) -> NSURL? {
         let components = NSURLComponents()
-        components.scheme = Work.Constants.scheme
-        components.host = Work.Constants.host
-        components.path = "\(Work.Constants.apiPath)\(endpoint.path)"
+        components.scheme = Constants.scheme
+        components.host = Constants.host
+        components.path = "\(Constants.apiPath)\(endpoint.path)"
         return components.URL
     }
 }
 
 private class StashRequestBuilder {
     
-    struct Personal {
-        struct Constants {
-            private static let username = "ramy_kfoury"
-            private static let password = "password"
-        }
-    }
-    struct Work {
     struct Constants {
         private static let username = ""
         private static let password = ""
     }
-    }
     
     static func build(url: NSURL) -> NSURLRequest? {
-        let loginString = "\(Work.Constants.username):\(Work.Constants.password)"
+        let loginString = "\(Constants.username):\(Constants.password)"
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         let request = NSMutableURLRequest(URL: url)
@@ -107,7 +88,6 @@ class StashNetworking {
         else {
             print("Unable to create NSURL")
         }
-
     }
 }
 

@@ -88,7 +88,7 @@ class StashBranch {
     let displayId: String
     
     init(withJSON json: JSON) {
-        self.id = json["id"].string ?? ""
+        self.id = json["id"].string?.stringByReplacingOccurrencesOfString("refs/heads/", withString: "") ?? ""
         self.latestCommit = json["latestCommit"].string ?? ""
         self.latestChangeset = json["latestChangeset"].string ?? ""
         self.displayId = json["displayId"].string ?? ""
